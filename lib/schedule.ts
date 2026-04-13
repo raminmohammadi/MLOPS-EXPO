@@ -3,7 +3,7 @@
  * All session windows are in EDT (UTC−4).
  */
 
-const EVENT_DATE = '2026-04-13';
+const EVENT_DATE = '2026-04-15';
 
 /** Convert an EDT wall-clock time on the event day to a UTC Date. */
 function edt(hour: number, minute: number): Date {
@@ -16,7 +16,7 @@ function edt(hour: number, minute: number): Date {
 
 export const SCHEDULE = {
   section1: { start: edt(9, 30),  end: edt(11, 30), label: '9:30 AM – 11:30 AM EDT' },
-  section2: { start: edt(17, 0),  end: edt(20, 0),  label: '12:00 PM – 2:00 PM EDT' },
+  section2: { start: edt(12, 0),  end: edt(14, 0),  label: '12:00 PM – 2:00 PM EDT' },
   leaderboardAt: edt(14, 30),
 } as const;
 

@@ -132,7 +132,7 @@ function ScheduleCard({ phase }: { phase: Phase }) {
   const rows = [
     { label: 'Section 1',    time: '9:30 AM – 11:30 AM EDT' },
     { label: 'Break',        time: '11:30 AM – 12:00 PM EDT' },
-    { label: 'Section 2',    time: '17:00 PM – 20:00 PM EDT'  },
+    { label: 'Section 2',    time: '12:00 PM – 2:00 PM EDT'  },
     { label: 'Leaderboard',  time: '2:30 PM EDT'              },
   ];
 
@@ -142,7 +142,7 @@ function ScheduleCard({ phase }: { phase: Phase }) {
       <h2 className="text-2xl font-bold text-white">{headline}</h2>
       <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-left space-y-3">
         <p className="text-slate-500 text-xs uppercase tracking-widest font-semibold mb-4">
-          April 13, 2026 — Schedule
+          April 15, 2026 — Schedule
         </p>
         {rows.map(({ label, time }) => (
           <div key={label} className="flex justify-between items-center">
