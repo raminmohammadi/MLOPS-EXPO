@@ -50,7 +50,7 @@ export default function VideoModal({
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-4">
             <img
-              src={`/${team.logo}`}
+              src={`/logos/${team.logo}`}
               alt={team.name}
               className="w-14 h-14 rounded-full object-cover border border-slate-700"
               onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}

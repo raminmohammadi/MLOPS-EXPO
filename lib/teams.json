@@ -51,14 +51,14 @@
   {
     "id": 8,
     "name": "FitSenseAI",
-    "logo": "fitSenseai.png",
+    "logo": "fitsenseai.png",
     "youtubeId": "NIL",
     "section": 2
   },
   {
     "id": 9,
     "name": "Courseweave.ai",
-    "logo": "courseweave.ai.jpeg",
+    "logo": "courseweaveai.jpeg",
     "youtubeId": "DcLarK90Apo",
     "section": 2
   },
@@ -100,14 +100,14 @@
   {
     "id": 15,
     "name": "DivergeX",
-    "logo": "divergex.png",
+    "logo": "divergex.jpg",
     "youtubeId": "LLUGbqG0Jjs",
     "section": 2
   },
   {
     "id": 16,
     "name": "Iikshana",
-    "logo": "iikshana.png",
+    "logo": "iikshana.jpg",
     "youtubeId": "eXGRao",
     "section": 1
   },
@@ -184,7 +184,7 @@
   {
     "id": 27,
     "name": "Wildfire Detection",
-    "logo": "wildfiredetection.png",
+    "logo": "wildfire.png",
     "youtubeId": "NIL",
     "section": 2
   },

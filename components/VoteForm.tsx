@@ -81,7 +81,7 @@ export default function VoteForm({ team, votingOpen }: { team: Team; votingOpen:
     <Screen>
       <div className="flex flex-col items-center gap-2 mb-6">
         <img
-          src={team.logo}
+          src={`/logos/${team.logo}`}
           alt={team.name}
           className="w-20 h-20 rounded-full object-cover border-2 border-slate-700"
           onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
