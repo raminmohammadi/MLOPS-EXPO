@@ -37,13 +37,31 @@ export default function VideoModal({
         </button>
 
         {/* YouTube embed */}
-        <div className="aspect-video w-full mb-8 rounded-xl overflow-hidden bg-slate-950">
+        <div className="aspect-video w-full rounded-xl overflow-hidden bg-slate-950">
           <iframe
             className="w-full h-full"
             src={`https://www.youtube.com/embed/${team.youtubeId}?autoplay=1`}
             allow="autoplay; encrypted-media; picture-in-picture"
             allowFullScreen
           />
+        </div>
+
+        {/* Vote button */}
+        <div className="my-5">
+          {votingOpen ? (
+            <a
+              href={voteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-bold text-base transition-colors shadow-lg shadow-blue-900/30"
+            >
+              🗳️ Vote for {team.name}
+            </a>
+          ) : (
+            <div className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-slate-800 border border-slate-700 text-slate-500 font-semibold text-base cursor-not-allowed">
+              🔒 Voting closed
+            </div>
+          )}
         </div>
 
         {/* Team info + QR */}
