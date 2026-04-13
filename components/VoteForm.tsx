@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 interface Team {
-  id: string;
+  id: number;
   name: string;
   logo: string;
 }
@@ -106,6 +106,14 @@ function Screen({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-slate-950 flex items-center justify-center p-6">
       <div className="w-full max-w-sm bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-2xl">
+        {/* Expo logo at top of every voting card */}
+        <div className="flex justify-center mb-6">
+          <img
+            src="/logos/MLOPS_Logo.png"
+            alt="MLOps Expo"
+            className="h-12 w-auto object-contain opacity-90"
+          />
+        </div>
         {children}
       </div>
     </div>

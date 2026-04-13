@@ -8,7 +8,8 @@ export default async function VotePage({
   searchParams: Promise<{ teamId?: string }>;
 }) {
   const { teamId } = await searchParams;
-  const team = teamsData.find((t) => t.id === teamId);
+  // t.id is a number in JSON; teamId from the URL is always a string — normalise both.
+  const team = teamsData.find((t) => String(t.id) === teamId);
 
   if (!team) {
     return (

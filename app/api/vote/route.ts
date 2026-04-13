@@ -5,7 +5,7 @@ import { recordVote } from '@/lib/store';
 export const dynamic = 'force-dynamic';
 
 export async function POST(request: NextRequest) {
-  let body: { teamId?: string; email?: string };
+  let body: { teamId?: string | number; email?: string };
 
   try {
     body = await request.json();
@@ -22,12 +22,13 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const team = teamsData.find((t) => t.id === teamId);
+  const teamIdStr = String(teamId);
+  const team = teamsData.find((t) => String(t.id) === teamIdStr);
   if (!team) {
     return NextResponse.json({ error: 'Unknown team.' }, { status: 400 });
   }
 
-  const result = recordVote(teamId, email);
+  const result = recordVote(teamIdStr, email);
 
   if (!result.success) {
     // 409 Conflict — already voted

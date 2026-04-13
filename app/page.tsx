@@ -6,7 +6,7 @@ import VideoModal from '@/components/VideoModal';
 import Leaderboard from '@/components/Leaderboard';
 
 interface Team {
-  id: string;
+  id: number;
   name: string;
   logo: string;
   youtubeId: string;
@@ -19,14 +19,10 @@ export default function ExpoPage() {
   const [view, setView] = useState<View>('grid');
 
   return (
-    <main className="min-h-screen bg-slate-950 text-white p-8">
-      <header className="flex flex-col sm:flex-row justify-between items-center mb-12 border-b border-slate-800 pb-6 gap-4">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tighter">
-            MLOps Expo <span className="text-blue-500">S6</span>
-          </h1>
-          <p className="text-slate-500 text-sm mt-1">Select a team to watch their demo and vote.</p>
-        </div>
+    <main className="text-white px-8 py-6">
+      {/* Nav bar */}
+      <div className="flex items-center justify-between mb-8">
+        <p className="text-slate-400 text-sm">Select a team to watch their demo and vote.</p>
         <nav className="flex gap-2">
           <button
             onClick={() => setView('grid')}
@@ -49,10 +45,10 @@ export default function ExpoPage() {
             🏆 Top 5
           </button>
         </nav>
-      </header>
+      </div>
 
       {view === 'grid' ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {(teamsData as Team[]).map((team) => (
             <TeamCard key={team.id} team={team} onSelect={() => setSelectedTeam(team)} />
           ))}

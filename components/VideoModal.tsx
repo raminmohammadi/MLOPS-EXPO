@@ -2,7 +2,7 @@
 import { QRCodeSVG } from 'qrcode.react';
 
 interface Team {
-  id: string;
+  id: number;
   name: string;
   logo: string;
   youtubeId: string;
