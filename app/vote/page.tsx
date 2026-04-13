@@ -1,6 +1,7 @@
-// Server Component — searchParams is a Promise in Next.js 16.
+// Server Component — runs on the server, so Date.now() is authoritative.
 import teamsData from '@/lib/teams.json';
 import VoteForm from '@/components/VoteForm';
+import { isSectionVotingOpen } from '@/lib/schedule';
 
 export default async function VotePage({
   searchParams,
@@ -8,7 +9,6 @@ export default async function VotePage({
   searchParams: Promise<{ teamId?: string }>;
 }) {
   const { teamId } = await searchParams;
-  // t.id is a number in JSON; teamId from the URL is always a string — normalise both.
   const team = teamsData.find((t) => String(t.id) === teamId);
 
   if (!team) {
@@ -23,5 +23,8 @@ export default async function VotePage({
     );
   }
 
-  return <VoteForm team={team} />;
+  // Server-side check — this is the authoritative gate.
+  const votingOpen = isSectionVotingOpen(team.section);
+
+  return <VoteForm team={team} votingOpen={votingOpen} />;
 }

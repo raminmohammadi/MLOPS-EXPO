@@ -3,174 +3,203 @@
     "id": 1,
     "name": "Interview Prep - AI",
     "logo": "NIL",
-    "youtubeId": "aEBVOKrHxFo"
+    "youtubeId": "aEBVOKrHxFo",
+    "section": 1
   },
   {
     "id": 2,
     "name": "Ketchup",
     "logo": "G2_Ketchup.png",
-    "youtubeId": "m08vA9fOup0"
+    "youtubeId": "m08vA9fOup0",
+    "section": 1
   },
   {
     "id": 3,
     "name": "CalmAI",
     "logo": "G3_CalmAI.png",
-    "youtubeId": "rFaRgFjO0Go"
+    "youtubeId": "rFaRgFjO0Go",
+    "section": 1
   },
   {
     "id": 4,
     "name": "Court access AI",
     "logo": "G4_Courtaccess.png",
-    "youtubeId": "fGDS6tC0ioM"
+    "youtubeId": "fGDS6tC0ioM",
+    "section": 1
   },
   {
     "id": 5,
     "name": "VISTA",
     "logo": "G5_Vista.png",
-    "youtubeId": "yjJxgsK4mGk"
+    "youtubeId": "yjJxgsK4mGk",
+    "section": 1
   },
   {
     "id": 6,
     "name": "R Lens",
     "logo": "G6_RLens.png",
-    "youtubeId": "JtTdrYNkxQ"
+    "youtubeId": "JtTdrYNkxQ",
+    "section": 1
   },
   {
     "id": 7,
     "name": "Stratos AI",
     "logo": "NIL",
-    "youtubeId": "AoD4YBNljAI"
+    "youtubeId": "AoD4YBNljAI",
+    "section": 1
   },
   {
     "id": 8,
     "name": "FitSenseAI",
     "logo": "G8_FitSenseAI.png",
-    "youtubeId": "NIL"
+    "youtubeId": "NIL",
+    "section": 1
   },
   {
     "id": 9,
     "name": "Courseweave.ai",
     "logo": "G9_Courseweave.AI.jpeg",
-    "youtubeId": "DcLarK90Apo"
+    "youtubeId": "DcLarK90Apo",
+    "section": 1
   },
   {
     "id": 10,
     "name": "RewardSense",
     "logo": "G10_RewardSense.png",
-    "youtubeId": "5T9_Oo-yI00"
+    "youtubeId": "5T9_Oo-yI00",
+    "section": 1
   },
   {
     "id": 11,
     "name": "Research Lineage",
     "logo": "G11_ResearchLineage.jpeg",
-    "youtubeId": "NIL"
+    "youtubeId": "NIL",
+    "section": 1
   },
   {
     "id": 12,
     "name": "Automend",
     "logo": "G12_Automend.jpeg",
-    "youtubeId": "HJTeEERrxiQ"
+    "youtubeId": "HJTeEERrxiQ",
+    "section": 1
   },
   {
     "id": 13,
     "name": "Resolv",
     "logo": "G13_Resolv.png",
-    "youtubeId": "AgEE2cZntHQ"
+    "youtubeId": "AgEE2cZntHQ",
+    "section": 1
   },
   {
     "id": 14,
     "name": "AuxLess",
     "logo": "G14_AuxLess.png",
-    "youtubeId": "xX3hACxn3bw"
+    "youtubeId": "xX3hACxn3bw",
+    "section": 1
   },
   {
     "id": 15,
     "name": "DivergeX",
     "logo": "G15_DivergeX.png",
-    "youtubeId": "LLUGbqG0Jjs"
+    "youtubeId": "LLUGbqG0Jjs",
+    "section": 1
   },
   {
     "id": 16,
     "name": "Iikshana",
     "logo": "G16_Iikshana.png",
-    "youtubeId": "eXGRao"
+    "youtubeId": "eXGRao",
+    "section": 2
   },
   {
     "id": 17,
     "name": "Boston Pulse",
     "logo": "G17_BostonPulse",
-    "youtubeId": "KGfGmHENdZM"
+    "youtubeId": "KGfGmHENdZM",
+    "section": 2
   },
   {
     "id": 18,
     "name": "Shift Happens",
     "logo": "G18_ShiftHappens",
-    "youtubeId": "EdNKWwstbcDzM"
+    "youtubeId": "EdNKWwstbcDzM",
+    "section": 2
   },
   {
     "id": 19,
     "name": "TrialLink AI",
     "logo": "G19_TrialLinkAI.jpeg",
-    "youtubeId": "udaMhDhvl1E"
+    "youtubeId": "udaMhDhvl1E",
+    "section": 2
   },
   {
     "id": 20,
     "name": "BlueForecast",
     "logo": "G20_BlueForecast.jpeg",
-    "youtubeId": "itTRv-UjqQE"
+    "youtubeId": "itTRv-UjqQE",
+    "section": 2
   },
   {
     "id": 21,
     "name": "Otto",
     "logo": "G21_Otto.png",
-    "youtubeId": "ICIZRLIUMQ4"
+    "youtubeId": "ICIZRLIUMQ4",
+    "section": 2
   },
   {
     "id": 22,
     "name": "Foresight",
     "logo": "G22_Foresight.png",
-    "youtubeId": "5t7bIGjnS_8"
+    "youtubeId": "5t7bIGjnS_8",
+    "section": 2
   },
   {
     "id": 23,
     "name": "Momento",
     "logo": "G23_Momento.png",
-    "youtubeId": "NIL"
+    "youtubeId": "NIL",
+    "section": 2
   },
   {
     "id": 24,
     "name": "LevelUP",
     "logo": "G24_LevelUP.png",
-    "youtubeId": "Mc8N5h9CQcU"
+    "youtubeId": "Mc8N5h9CQcU",
+    "section": 2
   },
   {
     "id": 25,
     "name": "Kairos Pulse",
     "logo": "NIL",
-    "youtubeId": "gPjiRQm2dnU"
+    "youtubeId": "gPjiRQm2dnU",
+    "section": 2
   },
   {
     "id": 26,
     "name": "Eco Pulse",
     "logo": "G26_EcoPulse.png",
-    "youtubeId": "JBNngcpixgE"
+    "youtubeId": "JBNngcpixgE",
+    "section": 2
   },
   {
     "id": 27,
     "name": "Wildfire Detection",
     "logo": "G27_Wildfire.png",
-    "youtubeId": "NIL"
+    "youtubeId": "NIL",
+    "section": 2
   },
   {
     "id": 28,
     "name": "Savvio",
     "logo": "G28_Savvio.svg",
-    "youtubeId": "NIL"
+    "youtubeId": "NIL",
+    "section": 2
   },
   {
     "id": 29,
     "name": "TicketForge",
     "logo": "G29_TicketForge.png",
-    "youtubeId": "vs2jPlST66A"
+    "youtubeId": "vs2jPlST66A",
+    "section": 2
   }
 ]

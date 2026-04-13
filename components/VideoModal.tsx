@@ -10,12 +10,13 @@ interface Team {
 
 export default function VideoModal({
   team,
+  votingOpen,
   onClose,
 }: {
   team: Team;
+  votingOpen: boolean;
   onClose: () => void;
 }) {
-  // window is always available here because this is a Client Component.
   const voteUrl = `${window.location.origin}/vote?teamId=${team.id}`;
 
   return (
@@ -23,7 +24,6 @@ export default function VideoModal({
       className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4"
       onClick={onClose}
     >
-      {/* Stop click propagating so clicking the card itself doesn't close */}
       <div
         className="bg-slate-900 border border-slate-800 rounded-2xl max-w-4xl w-full p-8 relative"
         onClick={(e) => e.stopPropagation()}
@@ -50,7 +50,7 @@ export default function VideoModal({
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-4">
             <img
-              src={team.logo}
+              src={`/${team.logo}`}
               alt={team.name}
               className="w-14 h-14 rounded-full object-cover border border-slate-700"
               onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
@@ -58,16 +58,21 @@ export default function VideoModal({
             <div>
               <h2 className="text-3xl font-bold leading-tight">{team.name}</h2>
               <p className="text-slate-400 mt-1 text-sm">
-                Scan the QR code with your phone to cast a vote.
+                {votingOpen
+                  ? 'Scan the QR code with your phone to cast a vote.'
+                  : 'Voting for this section has closed.'}
               </p>
             </div>
           </div>
 
+          {/* QR — greyed out with overlay when voting is closed */}
           <div className="flex flex-col items-center gap-2 shrink-0">
-            <div className="bg-white p-3 rounded-xl shadow-lg">
+            <div className={`relative bg-white p-3 rounded-xl shadow-lg transition-opacity ${votingOpen ? '' : 'opacity-25'}`}>
               <QRCodeSVG value={voteUrl} size={140} />
             </div>
-            <span className="text-xs text-slate-500">Vote via QR</span>
+            <span className={`text-xs font-medium ${votingOpen ? 'text-slate-500' : 'text-red-400'}`}>
+              {votingOpen ? 'Vote via QR' : 'Voting closed'}
+            </span>
           </div>
         </div>
       </div>

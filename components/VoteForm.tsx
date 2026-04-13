@@ -9,9 +9,23 @@ interface Team {
 
 type Status = 'idle' | 'loading' | 'success' | 'already_voted' | 'error';
 
-export default function VoteForm({ team }: { team: Team }) {
+export default function VoteForm({ team, votingOpen }: { team: Team; votingOpen: boolean }) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<Status>('idle');
+
+  if (!votingOpen) {
+    return (
+      <Screen>
+        <div className="text-center space-y-4">
+          <div className="text-5xl">🔒</div>
+          <h1 className="text-2xl font-bold">Voting Closed</h1>
+          <p className="text-slate-400 text-sm">
+            The voting window for this section has ended. Thank you for participating in MLOps Expo S6.
+          </p>
+        </div>
+      </Screen>
+    );
+  }
 
   const submitVote = async (e: React.FormEvent) => {
     e.preventDefault();

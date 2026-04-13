@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import teamsData from '@/lib/teams.json';
 import { recordVote } from '@/lib/store';
+import { isSectionVotingOpen } from '@/lib/schedule';
 
 export const dynamic = 'force-dynamic';
 
@@ -28,10 +29,17 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unknown team.' }, { status: 400 });
   }
 
+  // Server-side time gate — rejects votes outside the section's window.
+  if (!isSectionVotingOpen(team.section)) {
+    return NextResponse.json(
+      { error: 'Voting for this section is not currently open.' },
+      { status: 403 },
+    );
+  }
+
   const result = recordVote(teamIdStr, email);
 
   if (!result.success) {
-    // 409 Conflict — already voted
     return NextResponse.json({ error: result.message }, { status: 409 });
   }
 
