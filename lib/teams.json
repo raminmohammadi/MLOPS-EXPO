@@ -1,175 +1,176 @@
-
-{
-  "id": 1,
-  "name": "Interview Prep - AI",
-  "logo": "NIL",
-  "youtubeId": "aEBVOKrHxFo"
-},
-{
-  "id": 2,
-  "name": "Ketchup",
-  "logo": "G2_Ketchup.png",
-  "youtubeId": "m08vA9fOup0"
-},
-{
-  "id": 3,
-  "name": "CalmAI",
-  "logo": "G3_CalmAI.png",
-  "youtubeId": "rFaRgFjO0Go"
-},
-{
-  "id": 4,
-  "name": "Court access AI",
-  "logo": "G4_Courtaccess.png",
-  "youtubeId": "fGDS6tC0ioM"
-},
-{
-  "id": 5,
-  "name": "VISTA",
-  "logo": "G5_Vista.png",
-  "youtubeId": "yjJxgsK4mGk"
-},
-{
-  "id": 6,
-  "name": "R Lens",
-  "logo": "G6_RLens.png",
-  "youtubeId": "JtTdrYNkxQ"
-},
-{
-  "id": 7,
-  "name": "Stratos AI",
-  "logo": "NIL",
-  "youtubeId": "AoD4YBNljAI"
-},
-{
-  "id": 8,
-  "name": "FitSenseAI",
-  "logo": "G8_FitSenseAI.png",
-  "youtubeId": "NIL"
-},
-{
-  "id": 9,
-  "name": "Courseweave.ai",
-  "logo": "G9_Courseweave.AI.jpeg",
-  "youtubeId": "DcLarK90Apo"
-},
-{
-  "id": 10,
-  "name": "RewardSense",
-  "logo": "G10_RewardSense.png",
-  "youtubeId": "5T9_Oo-yI00"
-},
-{
-  "id": 11,
-  "name": "Research Lineage",
-  "logo": "G11_ResearchLineage.jpeg",
-  "youtubeId": "NIL"
-},
-{
-  "id": 12,
-  "name": "Automend",
-  "logo": "G12_Automend.jpeg",
-  "youtubeId": "HJTeEERrxiQ"
-},
-{
-  "id": 13,
-  "name": "Resolv",
-  "logo": "G13_Resolv.png",
-  "youtubeId": "AgEE2cZntHQ"
-},
-{
-  "id": 14,
-  "name": "AuxLess",
-  "logo": "G14_AuxLess.png",
-  "youtubeId": "xX3hACxn3bw"
-},
-{
-  "id": 15,
-  "name": "DivergeX",
-  "logo": "G15_DivergeX.png",
-  "youtubeId": "LLUGbqG0Jjs"
-},
-{
-  "id": 16,
-  "name": "Iikshana",
-  "logo": "G16_Iikshana.png",
-  "youtubeId": "eXGRao"
-},
-{
-  "id": 17,
-  "name": "Boston Pulse",
-  "logo": "G17_BostonPulse",
-  "youtubeId": "KGfGmHENdZM"
-},
-{
-  "id": 18,
-  "name": "Shift Happens",
-  "logo": "G18_ShiftHappens",
-  "youtubeId": "EdNKWwstbcDzM"
-},
-{
-  "id": 19,
-  "name": "TrialLink AI",
-  "logo": "G19_TrialLinkAI.jpeg",
-  "youtubeId": "udaMhDhvl1E"
-},
-{
-  "id": 20,
-  "name": "BlueForecast",
-  "logo": "G20_BlueForecast.jpeg",
-  "youtubeId": "itTRv-UjqQE"
-},
-{
-  "id": 21,
-  "name": "Otto",
-  "logo": "G21_Otto.png",
-  "youtubeId": "ICIZRLIUMQ4"
-},
-{
-  "id": 22,
-  "name": "Foresight",
-  "logo": "G22_Foresight.png",
-  "youtubeId": "5t7bIGjnS_8"
-},
-{
-  "id": 23,
-  "name": "Momento",
-  "logo": "G23_Momento.png",
-  "youtubeId": "NIL"
-},
-{
-  "id": 24,
-  "name": "LevelUP",
-  "logo": "G24_LevelUP.png",
-  "youtubeId": "Mc8N5h9CQcU"
-},
-{
-  "id": 25,
-  "name": "Kairos Pulse",
-  "logo": "NIL",
-  "youtubeId": "gPjiRQm2dnU"
-},
-{
-  "id": 26,
-  "name": "Eco Pulse",
-  "logo": "G26_EcoPulse.png",
-  "youtubeId": "JBNngcpixgE"
-},
-{
-  "id": 27,
-  "name": "Wildfire Detection",
-  "logo": "G27_Wildfire.png",
-  "youtubeId": "NIL"
-},
-{
-  "id": 28,
-  "name": "Savvio",
-  "logo": "G28_Savvio.svg",
-  "youtubeId": "NIL"
-},
-{
-  "id": 29,
-  "name": "TicketForge",
-  "logo": "G29_TicketForge.png",
-  "youtubeId": "vs2jPlST66A"
-}
+[
+  {
+    "id": 1,
+    "name": "Interview Prep - AI",
+    "logo": "NIL",
+    "youtubeId": "aEBVOKrHxFo"
+  },
+  {
+    "id": 2,
+    "name": "Ketchup",
+    "logo": "G2_Ketchup.png",
+    "youtubeId": "m08vA9fOup0"
+  },
+  {
+    "id": 3,
+    "name": "CalmAI",
+    "logo": "G3_CalmAI.png",
+    "youtubeId": "rFaRgFjO0Go"
+  },
+  {
+    "id": 4,
+    "name": "Court access AI",
+    "logo": "G4_Courtaccess.png",
+    "youtubeId": "fGDS6tC0ioM"
+  },
+  {
+    "id": 5,
+    "name": "VISTA",
+    "logo": "G5_Vista.png",
+    "youtubeId": "yjJxgsK4mGk"
+  },
+  {
+    "id": 6,
+    "name": "R Lens",
+    "logo": "G6_RLens.png",
+    "youtubeId": "JtTdrYNkxQ"
+  },
+  {
+    "id": 7,
+    "name": "Stratos AI",
+    "logo": "NIL",
+    "youtubeId": "AoD4YBNljAI"
+  },
+  {
+    "id": 8,
+    "name": "FitSenseAI",
+    "logo": "G8_FitSenseAI.png",
+    "youtubeId": "NIL"
+  },
+  {
+    "id": 9,
+    "name": "Courseweave.ai",
+    "logo": "G9_Courseweave.AI.jpeg",
+    "youtubeId": "DcLarK90Apo"
+  },
+  {
+    "id": 10,
+    "name": "RewardSense",
+    "logo": "G10_RewardSense.png",
+    "youtubeId": "5T9_Oo-yI00"
+  },
+  {
+    "id": 11,
+    "name": "Research Lineage",
+    "logo": "G11_ResearchLineage.jpeg",
+    "youtubeId": "NIL"
+  },
+  {
+    "id": 12,
+    "name": "Automend",
+    "logo": "G12_Automend.jpeg",
+    "youtubeId": "HJTeEERrxiQ"
+  },
+  {
+    "id": 13,
+    "name": "Resolv",
+    "logo": "G13_Resolv.png",
+    "youtubeId": "AgEE2cZntHQ"
+  },
+  {
+    "id": 14,
+    "name": "AuxLess",
+    "logo": "G14_AuxLess.png",
+    "youtubeId": "xX3hACxn3bw"
+  },
+  {
+    "id": 15,
+    "name": "DivergeX",
+    "logo": "G15_DivergeX.png",
+    "youtubeId": "LLUGbqG0Jjs"
+  },
+  {
+    "id": 16,
+    "name": "Iikshana",
+    "logo": "G16_Iikshana.png",
+    "youtubeId": "eXGRao"
+  },
+  {
+    "id": 17,
+    "name": "Boston Pulse",
+    "logo": "G17_BostonPulse",
+    "youtubeId": "KGfGmHENdZM"
+  },
+  {
+    "id": 18,
+    "name": "Shift Happens",
+    "logo": "G18_ShiftHappens",
+    "youtubeId": "EdNKWwstbcDzM"
+  },
+  {
+    "id": 19,
+    "name": "TrialLink AI",
+    "logo": "G19_TrialLinkAI.jpeg",
+    "youtubeId": "udaMhDhvl1E"
+  },
+  {
+    "id": 20,
+    "name": "BlueForecast",
+    "logo": "G20_BlueForecast.jpeg",
+    "youtubeId": "itTRv-UjqQE"
+  },
+  {
+    "id": 21,
+    "name": "Otto",
+    "logo": "G21_Otto.png",
+    "youtubeId": "ICIZRLIUMQ4"
+  },
+  {
+    "id": 22,
+    "name": "Foresight",
+    "logo": "G22_Foresight.png",
+    "youtubeId": "5t7bIGjnS_8"
+  },
+  {
+    "id": 23,
+    "name": "Momento",
+    "logo": "G23_Momento.png",
+    "youtubeId": "NIL"
+  },
+  {
+    "id": 24,
+    "name": "LevelUP",
+    "logo": "G24_LevelUP.png",
+    "youtubeId": "Mc8N5h9CQcU"
+  },
+  {
+    "id": 25,
+    "name": "Kairos Pulse",
+    "logo": "NIL",
+    "youtubeId": "gPjiRQm2dnU"
+  },
+  {
+    "id": 26,
+    "name": "Eco Pulse",
+    "logo": "G26_EcoPulse.png",
+    "youtubeId": "JBNngcpixgE"
+  },
+  {
+    "id": 27,
+    "name": "Wildfire Detection",
+    "logo": "G27_Wildfire.png",
+    "youtubeId": "NIL"
+  },
+  {
+    "id": 28,
+    "name": "Savvio",
+    "logo": "G28_Savvio.svg",
+    "youtubeId": "NIL"
+  },
+  {
+    "id": 29,
+    "name": "TicketForge",
+    "logo": "G29_TicketForge.png",
+    "youtubeId": "vs2jPlST66A"
+  }
+]
