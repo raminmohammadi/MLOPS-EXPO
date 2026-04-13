@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MLOps Expo S6",
+  title: "MLOps Expo Season 6",
   description: "Season 6 MLOps Expo — watch team demos and cast your vote.",
 };
 
@@ -38,7 +38,7 @@ export default function RootLayout({
           <div className="h-8 w-px bg-slate-700 mx-1" />
           <div>
             <p className="text-white font-bold text-2xl tracking-tight leading-none">
-              MLOps Expo <span className="text-blue-400">S6</span>
+              MLOps Expo <span className="text-blue-400">Season 6</span>
             </p>
             <p className="text-slate-500 text-xs mt-0.5 tracking-wide">April 15, 2026</p>
           </div>

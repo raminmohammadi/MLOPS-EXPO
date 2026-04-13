@@ -20,7 +20,7 @@ export default function VoteForm({ team, votingOpen }: { team: Team; votingOpen:
           <div className="text-5xl">🔒</div>
           <h1 className="text-2xl font-bold">Voting Closed</h1>
           <p className="text-slate-400 text-sm">
-            The voting window for this section has ended. Thank you for participating in MLOps Expo S6.
+            The voting window for this section has ended. Thank you for participating in MLOps Expo Season 6.
           </p>
         </div>
       </Screen>
@@ -59,7 +59,7 @@ export default function VoteForm({ team, votingOpen }: { team: Team; votingOpen:
           <p className="text-slate-400">
             Thanks for voting for <span className="text-white font-semibold">{team.name}</span>.
           </p>
-          <p className="text-slate-500 text-sm">MLOps Expo S6</p>
+          <p className="text-slate-500 text-sm">MLOps Expo Season 6</p>
         </div>
       </Screen>
     );

@@ -127,7 +127,7 @@ function ScheduleCard({ phase }: { phase: Phase }) {
     phase.kind === 'before_event'     ? "Event hasn't started yet" :
     phase.kind === 'between_sections' ? 'Break — Section 2 starts soon' :
     phase.kind === 'post_voting' && !(phase as { leaderboardReady: boolean }).leaderboardReady
-                                      ? 'Voting has ended' : 'MLOps Expo S6';
+                                      ? 'Voting has ended' : 'MLOps Expo Season 6';
 
   const rows = [
     { label: 'Section 1',    time: '9:30 AM – 11:30 AM EDT' },

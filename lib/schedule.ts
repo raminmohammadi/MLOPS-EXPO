@@ -1,5 +1,5 @@
 /**
- * MLOps Expo S6 — April 15, 2026
+ * MLOps Expo Season 6 — April 15, 2026
  * All session windows are in EDT (UTC−4).
  */
 

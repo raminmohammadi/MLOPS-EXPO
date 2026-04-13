@@ -1,4 +1,4 @@
-# MLOps Expo S6
+# MLOps Expo Season 6
 
 Elegant expo website for showcasing 30 team demos and collecting live audience votes via QR code. Built with Next.js 16, Tailwind CSS, and deployed on Vercel.
 
