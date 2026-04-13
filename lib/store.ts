@@ -10,8 +10,8 @@
 interface VoteStore {
   /** teamId → vote count */
   votes: Record<string, number>;
-  /** normalised email → teamId  (prevents double-voting) */
-  emailVotes: Record<string, string>;
+  /** normalised email → Set of teamIds already voted for */
+  emailVotes: Record<string, Set<string>>;
 }
 
 // Module-level singleton — one per Node.js process / lambda instance.
@@ -30,11 +30,14 @@ export function recordVote(
 ): { success: boolean; message: string } {
   const normalised = email.toLowerCase().trim();
 
-  if (store.emailVotes[normalised]) {
-    return { success: false, message: 'You have already cast a vote.' };
+  const voted = store.emailVotes[normalised] ?? new Set<string>();
+
+  if (voted.has(teamId)) {
+    return { success: false, message: 'You have already voted for this team.' };
   }
 
-  store.emailVotes[normalised] = teamId;
+  voted.add(teamId);
+  store.emailVotes[normalised] = voted;
   store.votes[teamId] = (store.votes[teamId] ?? 0) + 1;
 
   return { success: true, message: 'Vote recorded.' };

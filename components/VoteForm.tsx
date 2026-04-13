@@ -71,7 +71,7 @@ export default function VoteForm({ team, votingOpen }: { team: Team; votingOpen:
         <div className="text-center space-y-4">
           <div className="text-6xl">⚠️</div>
           <h1 className="text-3xl font-bold">Already Voted</h1>
-          <p className="text-slate-400">Each email address can only cast one vote.</p>
+          <p className="text-slate-400">You have already voted for this team with this email.</p>
         </div>
       </Screen>
     );
@@ -88,7 +88,7 @@ export default function VoteForm({ team, votingOpen }: { team: Team; votingOpen:
         />
         <h1 className="text-2xl font-bold text-white">{team.name}</h1>
         <p className="text-slate-400 text-sm text-center">
-          Enter your email to cast your vote. One vote per person.
+          Enter your email to vote. You may vote for each team once.
         </p>
       </div>
 
