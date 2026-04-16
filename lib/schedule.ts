@@ -16,7 +16,7 @@ function edt(hour: number, minute: number): Date {
 
 export const SCHEDULE = {
   section1: { start: edt(9, 30),  end: edt(11, 30), label: '9:30 AM – 11:30 AM EDT' },
-  section2: { start: edt(12, 0),  end: edt(14, 0),  label: '12:00 PM – 2:00 PM EDT' },
+  section2: { start: edt(15, 0),  end: edt(16, 0),  label: '12:00 PM – 2:00 PM EDT' },
   leaderboardAt: edt(14, 30),
 } as const;
 

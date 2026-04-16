@@ -1,7 +1,10 @@
 /**
- * In-memory vote store — persists within a single Node.js process instance.
- * For a short-duration expo event with a single Vercel deployment this is
- * perfectly fine: Vercel keeps the lambda warm as long as traffic is steady.
+ * In-memory vote store.
+ *
+ * Attached to the Node.js `global` object so it is shared across all
+ * Next.js Turbopack worker processes (which each get their own module
+ * instance, breaking a plain module-level variable).  This is the standard
+ * Next.js pattern for singletons in development and single-instance deploys.
  *
  * To add persistence later, replace recordVote / getVotes with calls to any
  * key-value store (Redis, Postgres, etc.) without touching any other file.
@@ -14,11 +17,16 @@ interface VoteStore {
   emailVotes: Record<string, Set<string>>;
 }
 
-// Module-level singleton — one per Node.js process / lambda instance.
-const store: VoteStore = {
-  votes: {},
-  emailVotes: {},
-};
+// Extend the global type so TypeScript accepts the property.
+declare global {
+  // eslint-disable-next-line no-var
+  var __mlopsVoteStore: VoteStore | undefined;
+}
+
+// Reuse the existing store if one already lives on global (hot-reload safe).
+const store: VoteStore =
+  global.__mlopsVoteStore ??
+  (global.__mlopsVoteStore = { votes: {}, emailVotes: {} });
 
 export function getVotes(): Record<string, number> {
   return store.votes;

@@ -12,7 +12,7 @@ export default function Leaderboard() {
   const [topTeams, setTopTeams] = useState<TeamWithVotes[]>([]);
 
   const fetchRankings = async () => {
-    const res = await fetch('/api/teams');
+    const res = await fetch('/api/teams', { cache: 'no-store' });
     const data = await res.json();
     setTopTeams(data.slice(0, 5));
   };
@@ -29,7 +29,7 @@ export default function Leaderboard() {
       {topTeams.map((team, index) => (
         <div key={team.id} className="flex items-center bg-slate-900 border border-slate-800 p-4 rounded-lg">
           <span className="text-3xl font-black text-slate-800 w-12">{index + 1}</span>
-          <img src={team.logo} className="w-10 h-10 rounded-full mr-4 border border-slate-700" alt="" />
+          <img src={`/logos/${team.logo}`} className="w-10 h-10 rounded-full object-contain mr-4 border border-slate-700 bg-slate-800" alt="" />
           <div className="flex-1">
             <div className="font-bold">{team.name}</div>
             <div className="text-xs text-slate-500">{team.voteCount} Votes</div>
