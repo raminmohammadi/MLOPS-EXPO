@@ -1,52 +1,58 @@
 /**
- * In-memory vote store.
+ * File-based vote store — persists to /tmp/mlops-votes.json.
  *
- * Attached to the Node.js `global` object so it is shared across all
- * Next.js Turbopack worker processes (which each get their own module
- * instance, breaking a plain module-level variable).  This is the standard
- * Next.js pattern for singletons in development and single-instance deploys.
+ * /tmp is on the real filesystem and is visible to every Node.js worker
+ * thread in the same OS process, so this works correctly with Next.js 16
+ * Turbopack which runs each API route in an isolated worker thread (breaking
+ * both module-level variables and the `global` singleton approach).
  *
- * To add persistence later, replace recordVote / getVotes with calls to any
- * key-value store (Redis, Postgres, etc.) without touching any other file.
+ * On Vercel production a single warm lambda handles the expo traffic, so
+ * /tmp is effectively durable for the lifetime of the event.
  */
 
-interface VoteStore {
+import fs from 'fs';
+import path from 'path';
+
+const STORE_PATH = path.join('/tmp', 'mlops-votes.json');
+
+interface StoreData {
   /** teamId → vote count */
   votes: Record<string, number>;
-  /** normalised email → Set of teamIds already voted for */
-  emailVotes: Record<string, Set<string>>;
+  /** normalised email → array of teamIds already voted for */
+  emailVotes: Record<string, string[]>;
 }
 
-// Extend the global type so TypeScript accepts the property.
-declare global {
-  // eslint-disable-next-line no-var
-  var __mlopsVoteStore: VoteStore | undefined;
+function read(): StoreData {
+  try {
+    return JSON.parse(fs.readFileSync(STORE_PATH, 'utf-8')) as StoreData;
+  } catch {
+    return { votes: {}, emailVotes: {} };
+  }
 }
 
-// Reuse the existing store if one already lives on global (hot-reload safe).
-const store: VoteStore =
-  global.__mlopsVoteStore ??
-  (global.__mlopsVoteStore = { votes: {}, emailVotes: {} });
+function write(data: StoreData): void {
+  fs.writeFileSync(STORE_PATH, JSON.stringify(data), 'utf-8');
+}
 
 export function getVotes(): Record<string, number> {
-  return store.votes;
+  return read().votes;
 }
 
 export function recordVote(
   teamId: string,
   email: string,
 ): { success: boolean; message: string } {
+  const data = read();
   const normalised = email.toLowerCase().trim();
+  const alreadyVoted = data.emailVotes[normalised] ?? [];
 
-  const voted = store.emailVotes[normalised] ?? new Set<string>();
-
-  if (voted.has(teamId)) {
+  if (alreadyVoted.includes(teamId)) {
     return { success: false, message: 'You have already voted for this team.' };
   }
 
-  voted.add(teamId);
-  store.emailVotes[normalised] = voted;
-  store.votes[teamId] = (store.votes[teamId] ?? 0) + 1;
+  data.emailVotes[normalised] = [...alreadyVoted, teamId];
+  data.votes[teamId] = (data.votes[teamId] ?? 0) + 1;
+  write(data);
 
   return { success: true, message: 'Vote recorded.' };
 }
