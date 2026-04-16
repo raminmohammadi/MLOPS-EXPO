@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,18 +31,36 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-slate-950">
         {/* Global top bar — appears on every page */}
         <div className="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800/60 px-8 py-4 flex items-center gap-4">
-          <img
-            src="/logos/MLOPS_Logo.png"
-            alt="MLOps Expo"
-            className="h-16 w-auto object-contain"
-          />
-          <div className="h-8 w-px bg-slate-700 mx-1" />
-          <div>
-            <p className="text-white font-bold text-2xl tracking-tight leading-none">
-              MLOps Expo <span className="text-blue-400">Season 6</span>
-            </p>
-            <p className="text-slate-500 text-xs mt-0.5 tracking-wide">April 15, 2026</p>
-          </div>
+          <Link href="/" className="flex items-center gap-4 shrink-0">
+            <img
+              src="/logos/MLOPS_Logo.png"
+              alt="MLOps Expo"
+              className="h-16 w-auto object-contain"
+            />
+            <div className="h-8 w-px bg-slate-700 mx-1" />
+            <div>
+              <p className="text-white font-bold text-2xl tracking-tight leading-none">
+                MLOps Expo <span className="text-blue-400">Season 6</span>
+              </p>
+              <p className="text-slate-500 text-xs mt-0.5 tracking-wide">April 15, 2026</p>
+            </div>
+          </Link>
+
+          {/* Global nav */}
+          <nav className="ml-auto flex items-center gap-2">
+            <Link
+              href="/"
+              className="px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+            >
+              🗳️ Live Voting
+            </Link>
+            <Link
+              href="/showcase"
+              className="px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+            >
+              🎬 Showcase
+            </Link>
+          </nav>
         </div>
 
         <div className="flex-1">{children}</div>
